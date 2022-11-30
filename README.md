@@ -1,6 +1,7 @@
 # eslint-plugin-chinese-check
 
-chinese-check
+检查变量是否包含简体/繁体, 可自动修复
+
 
 ## Installation
 
@@ -34,13 +35,24 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "chinese-check/rule-name": 2
+        "chinese-check/chinese-check": 1
     }
 }
 ```
 
-## Supported Rules
+or
 
-* Fill in provided rules here
+```json
+{
+    "rules": {
+        "chinese-check/chinese-check": [1, "T"]
+    }
+}
+```
 
+## 部分多音字需自行处理
 
+```js
+/* eslint-disable-next-line chinese-check/chinese-check */
+const a = "简体字"
+```
