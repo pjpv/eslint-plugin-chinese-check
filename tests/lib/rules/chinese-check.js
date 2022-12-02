@@ -30,7 +30,7 @@ ruleTester.run('chinese-check', rule, {
       code: "const a = '环境测试'",
       errors: [
         {
-          message: 'avoidMethod',
+          message: '错误',
         },
       ],
     },
@@ -38,7 +38,7 @@ ruleTester.run('chinese-check', rule, {
       code: "console.log('运行失败')",
       errors: [
         {
-          message: 'avoidMethod',
+          message: '错误',
         },
       ],
     },
