@@ -83,7 +83,7 @@ const a = "简体字"
                 'src/locales/lang/en-US/**/*',
             ],
             rules: {
-                'chinese-check/chinese-check': 1
+                'chinese-check/contains': 1
             }
         }
     ]
