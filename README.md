@@ -1,6 +1,7 @@
 # eslint-plugin-chinese-check
 
-检查变量中是否包含未转换的简体中文(或繁体), 可自动修复
+检查变量字符串中是否包含未转换的简体中文(或繁体), 可自动修复；
+检查变量中是否存在中文字符串；
 
 
 ## Installation
@@ -29,6 +30,7 @@ Add `chinese-check` to the plugins section of your `.eslintrc` configuration fil
 }
 ```
 
+## 1.chinese-check
 
 Then configure the rules you want to use under the rules section.
 
@@ -66,4 +68,24 @@ const a = '繁體字轉簡體字'
 ```js
 /* eslint-disable-next-line chinese-check/chinese-check */
 const a = "简体字"
+```
+
+
+## 2.contains
+
+```.eslintrc.js```
+
+```javascript
+{
+    overrides: [
+        {
+            files: [
+                'src/locales/lang/en-US/**/*',
+            ],
+            rules: {
+                'chinese-check/chinese-check': 1
+            }
+        }
+    ]
+}
 ```
