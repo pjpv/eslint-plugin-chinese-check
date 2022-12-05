@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-chinese-check",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "检查变量字符串中是否包含未转换的简体中文(或繁体), 可自动修复；检查变量中是否存在中文字符串",
   "keywords": [
     "eslint",
@@ -20,13 +20,12 @@
   },
   "homepage": "https://github.com/pjpv/eslint-plugin-chinese-check#readme",
   "devDependencies": {
-    "eslint": "^8.19.0",
+    "eslint": "^7.4.0",
     "eslint-plugin-eslint-plugin": "^5.0.0",
     "eslint-plugin-node": "^11.1.0",
     "mocha": "^10.0.0"
   },
   "engines": {
-    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
   },
   "peerDependencies": {
     "eslint": ">=7"
