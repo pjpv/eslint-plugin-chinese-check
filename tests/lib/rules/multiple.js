@@ -4,7 +4,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
-let rule = require('../../../lib/rules/contains');
+let rule = require('../../../lib/rules/multiple');
 
 let RuleTester = require('eslint').RuleTester;
 
@@ -19,27 +19,27 @@ let ruleTester = new RuleTester({
   },
 });
 
-ruleTester.run('contains', rule, {
+ruleTester.run('multiple', rule, {
 
   valid: [ // 合法示例
-    "var a = 'unit test'",
-    "console.log('success')",
+    "var a = '中文'",
+    "console.log('運行成功')",
   ],
 
   invalid: [ // 不合法示例
     {
-      code: "const a = '环境测试'",
+      code: "const a = '簡體字'",
       errors: [
         {
-          message: '检查到中文',
+          message: '檢測到多型字，請自行檢查: T體>(S=体 T=體体)',
         },
       ],
     },
     {
-      code: "console.log('运行失败')",
+      code: "console.log('繁體字')",
       errors: [
         {
-          message: '检查到中文',
+          message: '檢測到多型字，請自行檢查: T體>(S=体 T=體体)',
         },
       ],
     },

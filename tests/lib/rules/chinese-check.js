@@ -13,6 +13,7 @@ let RuleTester = require('eslint').RuleTester;
 // ------------------------------------------------------------------------------
 
 let ruleTester = new RuleTester({
+  parser: require.resolve('vue-eslint-parser'),
   parserOptions: {
     ecmaVersion: 10,
   },
@@ -30,17 +31,19 @@ ruleTester.run('chinese-check', rule, {
       code: "const a = '环境测试'",
       errors: [
         {
-          message: '错误',
+          message: '檢查到簡體字：环>環 || 测>測 || 试>試',
         },
       ],
+      output: "const a = '環境測試'"
     },
     {
       code: "console.log('运行失败')",
       errors: [
         {
-          message: '错误',
+          message: '檢查到簡體字：运>運 || 败>敗',
         },
       ],
+      output: "console.log('運行失敗')"
     },
   ],
 });

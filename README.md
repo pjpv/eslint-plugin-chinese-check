@@ -89,3 +89,15 @@ const a = "简体字"
     ]
 }
 ```
+## 3.multiple
+檢查1個中文有多個繁體的情況
+
+```.eslintrc.js```
+
+```javascript
+{
+    "rules": {
+        "chinese-check/multiple": 1
+    }
+}
+```
