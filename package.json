@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-chinese-check",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "检查变量字符串中是否包含未转换的简体中文(或繁体), 可自动修复；检查变量中是否存在中文字符串；检查1个中文有多个繁体的情况",
   "keywords": [
     "eslint",
