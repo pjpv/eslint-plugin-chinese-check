@@ -32,6 +32,6 @@
   "license": "ISC",
   "dependencies": {
     "contains-chinese": "^1.0.0",
-    "vue-eslint-parser": "^9.1.0"
+    "vue-eslint-parser": "^5.0.0"
   }
 }
